@@ -1,7 +1,9 @@
 use std::thread;
+use std::time::Instant;
 use std::sync::{Arc, Mutex};
 fn main() {
     let mut thread_vec = vec![];
+    let now = Instant::now();
     let result_vec = Arc::new(Mutex::new(Vec::<i128>::new()));
     let number_of_thread = 16;
     let bigsum = 10000000000;
@@ -33,4 +35,6 @@ fn main() {
         result += i;
     }
     println!("Result: {}", result);
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.3?}", elapsed);
 }
