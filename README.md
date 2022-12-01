@@ -1,6 +1,6 @@
 ## rust_multithread_bigsum
 ### Usage
-Execute `cargo run` for benchmark.
+Execute `cargo run --release` for benchmark.
 
 **Note:** You can modify these benchmark variable in `src/main.rs`.
 
